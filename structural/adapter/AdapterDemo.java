@@ -13,6 +13,7 @@ class LegacyXmlParser {
 class XmlToJsonAdapter implements JsonParser {
     private final LegacyXmlParser legacy = new LegacyXmlParser();
 
+    @Override
     public String parseJson(String input) {
         return legacy.parseXml("<root>" + input + "</root>");
     }

@@ -14,10 +14,12 @@ class FileLeaf implements Node {
         this.size = size;
     }
 
+    @Override
     public String name() {
         return name;
     }
 
+    @Override
     public int sizeBytes() {
         return size;
     }
@@ -35,10 +37,12 @@ class Folder implements Node {
         children.add(n);
     }
 
+    @Override
     public String name() {
         return name;
     }
 
+    @Override
     public int sizeBytes() {
         int sum = 0;
         for (Node c : children) {

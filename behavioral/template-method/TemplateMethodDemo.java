@@ -26,6 +26,7 @@ abstract class DataImporter {
 }
 
 class Utf8Importer extends DataImporter {
+    @Override
     protected String decode(byte[] raw) {
         return new String(raw, java.nio.charset.StandardCharsets.UTF_8);
     }

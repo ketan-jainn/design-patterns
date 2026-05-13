@@ -6,10 +6,12 @@ interface Beverage {
 }
 
 class Coffee implements Beverage {
+    @Override
     public String describe() {
         return "Coffee";
     }
 
+    @Override
     public int costCents() {
         return 200;
     }
@@ -28,10 +30,12 @@ class Milk extends BeverageDecorator {
         super(inner);
     }
 
+    @Override
     public String describe() {
         return inner.describe() + " + Milk";
     }
 
+    @Override
     public int costCents() {
         return inner.costCents() + 40;
     }
@@ -42,10 +46,12 @@ class Whip extends BeverageDecorator {
         super(inner);
     }
 
+    @Override
     public String describe() {
         return inner.describe() + " + Whip";
     }
 
+    @Override
     public int costCents() {
         return inner.costCents() + 50;
     }

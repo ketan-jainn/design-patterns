@@ -23,12 +23,14 @@ class NewsAgency {
 }
 
 class PhoneApp implements Subscriber {
+    @Override
     public void onNews(String headline) {
         System.out.println("Phone push: " + headline);
     }
 }
 
 class WebApp implements Subscriber {
+    @Override
     public void onNews(String headline) {
         System.out.println("Web refresh: " + headline);
     }

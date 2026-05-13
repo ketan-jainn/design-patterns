@@ -38,6 +38,7 @@ final class HttpRequest {
         }
     }
 
+    @Override
     public String toString() {
         return method + " " + url + (body.isEmpty() ? "" : " | " + body);
     }

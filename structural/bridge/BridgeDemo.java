@@ -4,12 +4,14 @@ interface Renderer {
 }
 
 class VectorRenderer implements Renderer {
+    @Override
     public void renderCircle(float r) {
         System.out.println("Vector circle r=" + r);
     }
 }
 
 class RasterRenderer implements Renderer {
+    @Override
     public void renderCircle(float r) {
         System.out.println("Raster circle r=" + r);
     }
@@ -33,6 +35,7 @@ class Circle extends Shape {
         this.radius = radius;
     }
 
+    @Override
     void draw() {
         renderer.renderCircle(radius);
     }

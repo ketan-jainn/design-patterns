@@ -6,21 +6,25 @@ interface TurnstileState {
 }
 
 class LockedState implements TurnstileState {
+    @Override
     public void coin(Turnstile t) {
         System.out.println("unlock");
         t.setState(new UnlockedState());
     }
 
+    @Override
     public void push(Turnstile t) {
         System.out.println("locked: push ignored");
     }
 }
 
 class UnlockedState implements TurnstileState {
+    @Override
     public void coin(Turnstile t) {
         System.out.println("already unlocked");
     }
 
+    @Override
     public void push(Turnstile t) {
         System.out.println("pass");
         t.setState(new LockedState());

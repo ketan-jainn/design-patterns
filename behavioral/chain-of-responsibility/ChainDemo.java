@@ -23,20 +23,24 @@ abstract class SupportHandler {
 }
 
 class L1 extends SupportHandler {
+    @Override
     protected boolean canHandle(String issue) {
         return issue.startsWith("password");
     }
 
+    @Override
     protected void resolve(String issue) {
         System.out.println("L1 fixed: " + issue);
     }
 }
 
 class L2 extends SupportHandler {
+    @Override
     protected boolean canHandle(String issue) {
         return issue.startsWith("billing");
     }
 
+    @Override
     protected void resolve(String issue) {
         System.out.println("L2 fixed: " + issue);
     }

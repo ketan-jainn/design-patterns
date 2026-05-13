@@ -13,6 +13,7 @@ class ChatRoom implements ChatMediator {
         users.add(u);
     }
 
+    @Override
     public void broadcast(String from, String msg) {
         for (User u : users) {
             if (!u.name().equals(from)) {

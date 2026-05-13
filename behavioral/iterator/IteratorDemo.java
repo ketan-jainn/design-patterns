@@ -16,14 +16,17 @@ class BookShelf implements Iterable<String> {
         }
     }
 
+    @Override
     public Iterator<String> iterator() {
         return new Iterator<String>() {
             private int i;
 
+            @Override
             public boolean hasNext() {
                 return i < size;
             }
 
+            @Override
             public String next() {
                 if (!hasNext()) {
                     throw new NoSuchElementException();

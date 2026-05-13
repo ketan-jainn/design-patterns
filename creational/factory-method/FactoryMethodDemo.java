@@ -4,12 +4,14 @@ interface Button {
 }
 
 class WindowsButton implements Button {
+    @Override
     public void render() {
         System.out.println("Windows button");
     }
 }
 
 class WebButton implements Button {
+    @Override
     public void render() {
         System.out.println("Web button");
     }
@@ -25,12 +27,14 @@ abstract class Dialog {
 }
 
 class WindowsDialog extends Dialog {
+    @Override
     Button createButton() {
         return new WindowsButton();
     }
 }
 
 class WebDialog extends Dialog {
+    @Override
     Button createButton() {
         return new WebButton();
     }

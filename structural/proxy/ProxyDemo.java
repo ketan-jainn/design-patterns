@@ -15,6 +15,7 @@ class RealImage implements Image {
         System.out.println("Loading " + file);
     }
 
+    @Override
     public void display() {
         System.out.println("Display " + file);
     }
@@ -28,6 +29,7 @@ class ProxyImage implements Image {
         this.file = file;
     }
 
+    @Override
     public void display() {
         if (real == null) {
             real = new RealImage(file);
